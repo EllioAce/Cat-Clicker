@@ -1,0 +1,17 @@
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\Cat Clicker.deps.json
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\Cat Clicker.runtimeconfig.json
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\Cat Clicker.dll
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\Cat Clicker.pdb
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.csproj.AssemblyReference.cache
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.GeneratedMSBuildEditorConfig.editorconfig
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.AssemblyInfoInputs.cache
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.AssemblyInfo.cs
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.csproj.CoreCompileInputs.cache
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.csproj.CopyComplete
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.dll
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\refint\Cat Clicker.dll
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.pdb
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\Cat Clicker.genruntimeconfig.cache
+D:\Godot Projects\Version 4\Cat Clicker\.godot\mono\temp\obj\Debug\ref\Cat Clicker.dll

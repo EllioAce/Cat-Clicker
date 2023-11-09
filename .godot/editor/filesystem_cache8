@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1699533108
+icon.svg::CompressedTexture2D::3427272966778348424::1699449907::1699449923::1::::<><>::
+::res://components/::1699462444
+ClickComponent.cs::CSharpScript::-1::1699462554::0::1::::ClickComponent<>Area2D<>::
+click_component.tscn::PackedScene::4840236527285129892::1699462444::0::1::::<><>::res://components/ClickComponent.cs
+::res://objects/::1699462444
+cat.tscn::PackedScene::8293369190597481432::1699462444::0::1::::<><>::uid://5urt3dos0bry::::res://res/gfx/cat/cat_normal.png<>res://components/ClickComponent.cs
+::res://res/::1699451083
+color_palette.png::CompressedTexture2D::5464920740745619401::1699450475::1699450499::1::::<><>::
+::res://res/dev/::1699451236
+::res://res/gfx/::1699451088
+::res://res/gfx/cat/::1699451253
+cat_happie.png::CompressedTexture2D::3680190447538142155::1699451248::1699451253::1::::<><>::
+cat_normal.png::CompressedTexture2D::2148020459132741574::1699451098::1699451253::1::::<><>::
+::res://worlds/::1699463210
+world.tscn::PackedScene::7386996145735658389::1699463210::0::1::::<><>::uid://dqfmtxg2g8qy7::::res://objects/cat.tscn

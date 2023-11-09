@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqfmtxg2g8qy7"]
+
+[ext_resource type="Texture2D" uid="uid://5urt3dos0bry" path="res://res/gfx/cat/cat_normal.png" id="1_5ajyj"]
+[ext_resource type="Script" path="res://components/ClickComponent.cs" id="2_wok04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owvdi"]
+size = Vector2(32, 32)
+
+[node name="Cat" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("1_5ajyj")
+
+[node name="ClickComponent" type="Area2D" parent="."]
+script = ExtResource("2_wok04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickComponent"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_owvdi")
