@@ -1,4 +1,2 @@
-res://components/click_component.tscn
 res://objects/cat.tscn
-res://worlds/world.tscn
-res://components/ClickComponent.cs
+res://components/self_freeing_particle.tscn
