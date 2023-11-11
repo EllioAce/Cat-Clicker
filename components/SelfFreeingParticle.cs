@@ -5,10 +5,11 @@ using System;
 public partial class SelfFreeingParticle : GpuParticles2D
 {
     float freeTime = 1f;
-    public SelfFreeingParticle(float freeTime, ParticleProcessMaterial processMaterial)
+    public SelfFreeingParticle(float freeTime, ParticleProcessMaterial processMaterial, Texture2D texture)
     {
         this.freeTime = freeTime;
         ProcessMaterial = processMaterial;
+        Texture = texture;
     }
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -17,10 +18,10 @@ public partial class SelfFreeingParticle : GpuParticles2D
         timeoutTimer.OneShot = true;
         timeoutTimer.WaitTime = freeTime;
         AddChild(timeoutTimer);
-        timeoutTimer.Connect("timeout", TimeoutEvent());
+        timeoutTimer.Timeout += TimeoutEvent;
     }
-    public Callable TimeoutEvent()
+    public void TimeoutEvent()
     {
-        return new Callable();
+        QueueFree();
     }
 }

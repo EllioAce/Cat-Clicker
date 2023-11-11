@@ -16,6 +16,10 @@ public partial class ClickComponent : Area2D
     public override void _Process(double delta)
     {
         mouseHovering = MouseInsideArea();
+        if (Input.IsActionJustPressed("click") && mouseHovering)
+        {
+            EmitSignal("OnClick");
+        }
     }
     bool MouseInsideArea()
     {

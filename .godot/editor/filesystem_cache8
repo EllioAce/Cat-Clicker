@@ -1,11 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699622397
+::res://::1699707639
 icon.svg::CompressedTexture2D::3427272966778348424::1699449907::1699449923::1::::<><>::
-::res://components/::1699462444
+::res://components/::1699623393
 ClickComponent.cs::CSharpScript::-1::1699462554::0::1::::ClickComponent<>Area2D<>::
 click_component.tscn::PackedScene::4840236527285129892::1699462444::0::1::::<><>::res://components/ClickComponent.cs
-::res://objects/::1699536605
-cat.tscn::PackedScene::8293369190597481432::1699536604::0::1::::<><>::uid://5urt3dos0bry::::res://res/gfx/cat/cat_normal.png<>res://components/ClickComponent.cs
+SelfFreeingParticle.cs::CSharpScript::-1::1699623430::0::1::::<><>::
+self_freeing_particle.tscn::PackedScene::8986161732711861700::1699623393::0::1::::<><>::res://components/SelfFreeingParticle.cs
+::res://objects/::1699622616
+cat.tscn::PackedScene::8293369190597481432::1699622616::0::1::::<><>::uid://5urt3dos0bry::::res://res/gfx/cat/cat_normal.png<>res://components/ClickComponent.cs
 ::res://res/::1699451083
 color_palette.png::CompressedTexture2D::5464920740745619401::1699450475::1699450499::1::::<><>::
 ::res://res/dev/::1699615293
@@ -13,7 +15,7 @@ color_palette.png::CompressedTexture2D::5464920740745619401::1699450475::1699450
 ::res://res/gfx/cat/::1699451253
 cat_happie.png::CompressedTexture2D::3680190447538142155::1699451248::1699451253::1::::<><>::
 cat_normal.png::CompressedTexture2D::2148020459132741574::1699451098::1699451253::1::::<><>::
-::res://res/gfx/particles/::1699617160
+::res://res/gfx/particles/::1699622398
 love.png::CompressedTexture2D::1376042468923136018::1699617160::1699622398::1::::<><>::
 ::res://worlds/::1699463210
 world.tscn::PackedScene::7386996145735658389::1699463210::0::1::::<><>::uid://dqfmtxg2g8qy7
