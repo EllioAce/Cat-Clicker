@@ -34,9 +34,9 @@ public partial class Cat : Sprite2D
     public override void _Ready()
     {
         originalScale = Scale;
-        clickComponent = GetChild<ClickComponent>(0);
+        clickComponent = Utils.GetFirstChildOfType<ClickComponent>(this);
         clickComponent.OnClick += OnClick;
-        collider = clickComponent.GetChild<CollisionShape2D>(0);
+        collider = Utils.GetFirstChildOfType<CollisionShape2D>(clickComponent);
         shrinkScale = new Vector2(1, 1);
         normalTexture = Texture;
         happyTimer = new Timer();

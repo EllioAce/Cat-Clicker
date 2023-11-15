@@ -11,7 +11,7 @@ public partial class ClickComponent : Area2D
     public bool MouseHovering { get => mouseHovering; }
     public override void _Ready()
     {
-        collider = GetChild<CollisionShape2D>(0);
+        collider = Utils.GetFirstChildOfType<CollisionShape2D>(this);
     }
     public override void _Process(double delta)
     {

@@ -6,30 +6,25 @@ public partial class World : Node2D
     Cat cat;
     long displayedPets;
     double pets;
-    double petsPerSecond = 1;
-    Timer ppsTimer;
+    double petsPerSecond;
+    UI ui;
+    [Export]
+    PettersResource petters;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        cat = GetChild<Cat>(0);
+        cat = Utils.GetFirstChildOfType<Cat>(this);
         cat.ClickComponent.OnClick += () => { pets++; };
-        ppsTimer = new Timer();
-        ppsTimer.WaitTime = 1;
-        ppsTimer.Timeout += AddPetsPerSecond;
-        AddChild(ppsTimer);
-        ppsTimer.Start();
+        ui = Utils.GetFirstChildOfType<UI>(this);
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
+        petsPerSecond = petters.GetPetsPerSecond();
+        pets += petsPerSecond * delta;
         displayedPets = (long)Math.Floor(pets);
-        GD.Print(displayedPets);
-    }
-
-    void AddPetsPerSecond()
-    {
-        pets += petsPerSecond;
-        ppsTimer.Start();
+        ui.DisplayPets(displayedPets);
+        ui.DisplayPetsPerSecond(petsPerSecond);
     }
 }
