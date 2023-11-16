@@ -1,13 +1,7 @@
+res://ui/buy_button.tscn
+res://resources/petters.tres
 res://worlds/world.tscn
 res://components/click_component.tscn
 res://objects/cat.tscn
 res://components/self_freeing_particle.tscn
 res://ui/ui.tscn
-res://resources/PettersResource.cs
-res://components/ClickComponent.cs
-res://components/SelfFreeingParticle.cs
-res://objects/Cat.cs
-res://ui/UI.cs
-res://worlds/World.cs
-res://src/Petter.cs
-res://resources/petters.tres

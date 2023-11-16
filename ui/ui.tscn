@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://s44etigc4lw8"]
+[gd_scene load_steps=6 format=3 uid="uid://s44etigc4lw8"]
 
 [ext_resource type="FontFile" uid="uid://ddve63mccxuke" path="res://res/font/PixgamerRegular.ttf" id="1_52j2m"]
 [ext_resource type="Script" path="res://ui/UI.cs" id="1_jfef3"]
+[ext_resource type="PackedScene" uid="uid://i8fd5lfph1ny" path="res://ui/buy_button.tscn" id="3_y0d1h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ahxj"]
 font = ExtResource("1_52j2m")
@@ -13,8 +14,8 @@ font_size = 64
 
 [node name="UI" type="CanvasLayer" node_paths=PackedStringArray("petsLabel", "petsPerSecondLabel")]
 script = ExtResource("1_jfef3")
-petsLabel = NodePath("Control/VBoxContainer/Pets")
-petsPerSecondLabel = NodePath("Control/VBoxContainer/PetsPerSecond")
+petsLabel = NodePath("Control/Pets/Pets")
+petsPerSecondLabel = NodePath("Control/Pets/PetsPerSecond")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -24,22 +25,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="Pets" type="VBoxContainer" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 alignment = 1
 
-[node name="Pets" type="Label" parent="Control/VBoxContainer"]
+[node name="Pets" type="Label" parent="Control/Pets"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Pets: 1"
 label_settings = SubResource("LabelSettings_0ahxj")
 
-[node name="PetsPerSecond" type="Label" parent="Control/VBoxContainer"]
+[node name="PetsPerSecond" type="Label" parent="Control/Pets"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Pets Per Second: 0"
 label_settings = SubResource("LabelSettings_1adif")
+
+[node name="Shop" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+alignment = 1
+
+[node name="PetterStore" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -378.0
+offset_top = 3.0
+offset_right = -378.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_constants/separation = 80
+
+[node name="BuyButton" parent="Control/PetterStore" instance=ExtResource("3_y0d1h")]
+layout_mode = 2
+
+[node name="Control" parent="Control/PetterStore" instance=ExtResource("3_y0d1h")]
+layout_mode = 2

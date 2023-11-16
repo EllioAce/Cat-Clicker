@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://i8fd5lfph1ny"]
+
+[ext_resource type="FontFile" uid="uid://ddve63mccxuke" path="res://res/font/PixgamerRegular.ttf" id="1_cvigs"]
+[ext_resource type="Texture2D" uid="uid://bo3gxj5q6a2ue" path="res://icon.svg" id="2_f5ibj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n35w4"]
+font = ExtResource("1_cvigs")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_11pot"]
+font = ExtResource("1_cvigs")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrke1"]
+font = ExtResource("1_cvigs")
+font_size = 25
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BuyButton" type="Button" parent="."]
+offset_right = 376.0
+offset_bottom = 74.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BuyButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="IconMargin" type="MarginContainer" parent="BuyButton/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 3
+
+[node name="TextureRect" type="TextureRect" parent="BuyButton/HBoxContainer/IconMargin"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_f5ibj")
+expand_mode = 2
+
+[node name="N&CContainer" type="VBoxContainer" parent="BuyButton/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Name" type="Label" parent="BuyButton/HBoxContainer/N&CContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Unnamed"
+label_settings = SubResource("LabelSettings_n35w4")
+vertical_alignment = 1
+
+[node name="Cost" type="Label" parent="BuyButton/HBoxContainer/N&CContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 10
+text = "Cost: 15"
+label_settings = SubResource("LabelSettings_11pot")
+
+[node name="AmountMargin" type="MarginContainer" parent="BuyButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Amount" type="Label" parent="BuyButton/AmountMargin"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+size_flags_horizontal = 8
+text = "7"
+label_settings = SubResource("LabelSettings_mrke1")
+vertical_alignment = 1

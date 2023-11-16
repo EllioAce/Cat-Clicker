@@ -1,7 +1,15 @@
-Label
-VBoxContainer
 Control
 CanvasLayer
+VBoxContainer
+Label
+BoxContainer
+AspectRatioContainer
+PanelContainer
+MarginContainer
+HBoxContainer
+TextureRect
+Container
+Button
 GPUParticles2D
 CollisionShape2D
 ClickComponent
