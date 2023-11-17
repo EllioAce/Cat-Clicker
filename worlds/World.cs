@@ -16,6 +16,7 @@ public partial class World : Node2D
         cat = Utils.GetFirstChildOfType<Cat>(this);
         cat.ClickComponent.OnClick += () => { pets++; };
         ui = Utils.GetFirstChildOfType<UI>(this);
+        ui.AddPetterStore(petters, this);
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,5 +27,11 @@ public partial class World : Node2D
         displayedPets = (long)Math.Floor(pets);
         ui.DisplayPets(displayedPets);
         ui.DisplayPetsPerSecond(petsPerSecond);
+    }
+    public void BuyPetter(Petter petter, int cost)
+    {
+        if (pets < cost) return;
+        pets -= cost;
+        petter.Amount += 1;
     }
 }

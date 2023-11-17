@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="PettersResource" load_steps=4 format=3 uid="uid://cb1jg6jfm147l"]
+[gd_resource type="Resource" script_class="PettersResource" load_steps=5 format=3 uid="uid://cb1jg6jfm147l"]
 
 [ext_resource type="Script" path="res://src/Petter.cs" id="1_e73fc"]
+[ext_resource type="Texture2D" uid="uid://bo3gxj5q6a2ue" path="res://icon.svg" id="1_rutlh"]
 [ext_resource type="Script" path="res://resources/PettersResource.cs" id="1_twh85"]
 
 [sub_resource type="Resource" id="Resource_q4vgh"]
@@ -8,6 +9,7 @@ script = ExtResource("1_e73fc")
 name = "Autopetter"
 petsPerSecond = 0.1
 baseCost = 10
+icon = ExtResource("1_rutlh")
 
 [resource]
 script = ExtResource("1_twh85")

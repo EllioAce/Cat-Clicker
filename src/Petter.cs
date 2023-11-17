@@ -11,8 +11,11 @@ public partial class Petter : Resource
     double petsPerSecond = 0.1;
     public double PetsPerSecond { get => petsPerSecond; }
     [Export]
-    long baseCost = 1;
-    public long BaseCost { get => baseCost; }
+    int baseCost = 1;
+    public int BaseCost { get => baseCost; }
+    [Export]
+    Texture2D icon;
+    public Texture2D Icon { get => icon; }
     int amount = 0;
     public int Amount { get => amount; set => amount = value; }
 }

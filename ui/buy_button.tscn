@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://i8fd5lfph1ny"]
+[gd_scene load_steps=7 format=3 uid="uid://i8fd5lfph1ny"]
 
+[ext_resource type="Script" path="res://ui/BuyButton.cs" id="1_3tgdr"]
 [ext_resource type="FontFile" uid="uid://ddve63mccxuke" path="res://res/font/PixgamerRegular.ttf" id="1_cvigs"]
 [ext_resource type="Texture2D" uid="uid://bo3gxj5q6a2ue" path="res://icon.svg" id="2_f5ibj"]
 
@@ -15,19 +16,25 @@ font_size = 32
 font = ExtResource("1_cvigs")
 font_size = 25
 
-[node name="Control" type="Control"]
+[node name="BuyButton" type="Control" node_paths=PackedStringArray("nameLabel", "costLabel", "amountLabel", "iconRect")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_3tgdr")
+nameLabel = NodePath("Button/HBoxContainer/N&CContainer/Name")
+costLabel = NodePath("Button/HBoxContainer/N&CContainer/Cost")
+amountLabel = NodePath("Button/AmountMargin/Amount")
+iconRect = NodePath("Button/HBoxContainer/IconMargin/TextureRect")
 
-[node name="BuyButton" type="Button" parent="."]
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_right = 376.0
 offset_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BuyButton"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="IconMargin" type="MarginContainer" parent="BuyButton/HBoxContainer"]
+[node name="IconMargin" type="MarginContainer" parent="Button/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/margin_left = 3
@@ -44,19 +51,19 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 3
 
-[node name="TextureRect" type="TextureRect" parent="BuyButton/HBoxContainer/IconMargin"]
+[node name="TextureRect" type="TextureRect" parent="Button/HBoxContainer/IconMargin"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_f5ibj")
 expand_mode = 2
 
-[node name="N&CContainer" type="VBoxContainer" parent="BuyButton/HBoxContainer"]
+[node name="N&CContainer" type="VBoxContainer" parent="Button/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Name" type="Label" parent="BuyButton/HBoxContainer/N&CContainer"]
+[node name="Name" type="Label" parent="Button/HBoxContainer/N&CContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -65,14 +72,14 @@ text = "Unnamed"
 label_settings = SubResource("LabelSettings_n35w4")
 vertical_alignment = 1
 
-[node name="Cost" type="Label" parent="BuyButton/HBoxContainer/N&CContainer"]
+[node name="Cost" type="Label" parent="Button/HBoxContainer/N&CContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 10
 text = "Cost: 15"
 label_settings = SubResource("LabelSettings_11pot")
 
-[node name="AmountMargin" type="MarginContainer" parent="BuyButton"]
+[node name="AmountMargin" type="MarginContainer" parent="Button"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -90,7 +97,7 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
-[node name="Amount" type="Label" parent="BuyButton/AmountMargin"]
+[node name="Amount" type="Label" parent="Button/AmountMargin"]
 texture_filter = 1
 texture_repeat = 1
 layout_mode = 2

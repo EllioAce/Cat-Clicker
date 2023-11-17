@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://s44etigc4lw8"]
+[gd_scene load_steps=5 format=3 uid="uid://s44etigc4lw8"]
 
 [ext_resource type="FontFile" uid="uid://ddve63mccxuke" path="res://res/font/PixgamerRegular.ttf" id="1_52j2m"]
 [ext_resource type="Script" path="res://ui/UI.cs" id="1_jfef3"]
-[ext_resource type="PackedScene" uid="uid://i8fd5lfph1ny" path="res://ui/buy_button.tscn" id="3_y0d1h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ahxj"]
 font = ExtResource("1_52j2m")
@@ -66,9 +65,3 @@ offset_right = -378.0
 offset_bottom = 43.0
 grow_horizontal = 0
 theme_override_constants/separation = 80
-
-[node name="BuyButton" parent="Control/PetterStore" instance=ExtResource("3_y0d1h")]
-layout_mode = 2
-
-[node name="Control" parent="Control/PetterStore" instance=ExtResource("3_y0d1h")]
-layout_mode = 2
